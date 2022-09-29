@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Funcionários </title>
+<link rel="stylesheet" type="text/css" href="resources/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="resources/css/bootstrap-vue.css">
+<link rel="shortcut icon" type="image/png" href="favicon.ico" />
+</head>
+<body>
+    <div id="app" class="container-fluid table">
+        <navbar></navbar>
+        <div id="mensagem" class="alert alert-dismissible fade show" :class="classeMensagem" v-if="mensagem">
+            {{ mensagem }}
+            <button type="button" class="close" onclick="$('#mensagem').hide()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <router-view></router-view>
+    </div>
+    <!-- JAVASCRIPT  -->
+    <script src="resources/js/jquery-3.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+    <!-- BIBLIOTECAS VUE.JS -->
+    <script src="resources/js/vue.js"></script>
+    <script src="resources/js/vue-router.js"></script>
+    <script src="resources/js/axios.min.js"></script>
+    <script src="resources/js/vee-validate.js"></script>
+   
+ 
+    <!-- MODELO -->
+ 
+    <script src="resources/js/modelo/Funcionario.js"></script>
+     <script src="resources/js/modelo/Setor.js"></script>
+    <!-- SERVICE -->
+  
+    <script src="resources/js/service/FuncionarioService.js"></script>
+    <script src="resources/js/service/SetorService.js"></script>
+   
+
+    <!-- COMPONENTES -->
+  
+    <script src="resources/js/components/form-group.js"></script>
+    <script src="resources/js/components/input-text.js"></script>
+    <script src="resources/js/components/input-select.js"></script>
+ 
+     <script src="resources/js/components/pages/inicio.js"></script>
+    <script src="resources/js/components/pages/list-funcionario.js"></script>
+     <script src="resources/js/components/pages/create-funcionario.js"></script>
+     <script src="resources/js/components/pages/update-funcionario.js"></script>
+     <script src="resources/js/components/pages/list-setor.js"></script>
+     <script src="resources/js/components/pages/create-setor.js"></script>
+     <script src="resources/js/components/pages/update-setor.js"></script>
+ 
+    <script src="resources/js/router.js"></script>
+    <script src="resources/js/components/navbar.js"></script>
+     <script src="resources/js/pt_BR.js"></script>
+    <script src="resources/js/index.js"></script>
+</body>
+</html>
