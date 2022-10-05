@@ -1,4 +1,3 @@
-
 [![](https://img.shields.io/pypi/status/ok)](https://travis-ci.org/joemccann/dillinger)
 ## Processo Seletivo Hepta
 
@@ -106,6 +105,27 @@ Programação orientada a reuso
 >Listando Setores
 
 <center><img src="/fotos/rest_listar_setor.png" width="600"></center>
+
+## Correção do erro java.lang.ClassNotFoundException: org.glassfish.jersey.servlet.ServletContainer
+
+**Essa exceção ocorre quando  há a configuração do  projeto jersey 2 pela primeira vez no Eclipse usando o plugin Maven.
+A mensagem de erro é simples o suficiente para identificar a causa raiz de que as bibliotecas Jersey não estão no caminho de classe.**
+
+> **Solução – Adicionar Biblioteca Jersey no Conjunto de Implantação**  
+Passo 1: vá na propiedade do projeto    
+Passo 2: vá em Deployment Assembly  
+Passo 3: vá em adicionar  
+Passo 4 : na outra janela aberta selecione **Java Build Path Entries**  
+Passo 5: vá em next   
+<center><img src="/fotos/erro1.png" width="600"></center>
+
+>Abrirá uma nova janela com a Maven Dependencias e vá em finish
+<center><img src="/fotos/erro2.png" width="600"></center>
+
+>Maven Dependencias agora aparece na lista, vá em aply e depois em aply and close.    
+Agora basta reiniciar o servidor Apache Tomcat 
+<center><img src="/fotos/erro3.png" width="600"></center>
+
 
 
 
